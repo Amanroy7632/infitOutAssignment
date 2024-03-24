@@ -1,0 +1,11 @@
+@import url("https://fonts.googleapis.com/css?family=Raleway");
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+body{
+    /* background-color: #fff; */
+    background-color: rgb(241 245 249);
+}
+.display-more .show{
+    overflow: auto;
+}
