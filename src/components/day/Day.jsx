@@ -3,24 +3,25 @@ import { NavLink } from 'react-router-dom'
 function Day({data,setPosition,position}) {
     const [isActive,setIsActive]=useState(false);
     const addTitle=(keyId)=>{
+        console.log(`Position : ${position}`);
         if(keyId===data.id){
             data.isHighlight=true
             if(data.subName.includes("5")){
-                if(position>=30){
+                if(position>=25){
 
                     setPosition(position-Math.floor(Math.random()*5));
-                    console.log(position);
+                    // console.log(position);
                 }else {
-                    setPosition(position+Math.floor(Math.random()*5));
-                    console.log(position);
+                    setPosition(position+Math.floor(Math.random()*2));
+                    // console.log(position);
                     
                 }
             }
             else if(data.subName.includes("0")){
-                if(position>=30 || position<0){
+                if(position>=25){
                     setPosition(position-Math.floor(Math.random()*10));
                 }else{
-                    setPosition(position+Math.floor(Math.random()*10));
+                    setPosition(position+Math.floor(Math.random()*9));
                 }
             }
         }

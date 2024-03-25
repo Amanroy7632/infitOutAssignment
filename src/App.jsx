@@ -14,9 +14,8 @@ function App() {
   const [sDataToggled, setsDataToggled] = useState(false);
   const [nDataToggled, setnDataToggled] = useState(false);
   const [position,setPosition]=useState(0);
-  // console.log("Position is : ",position);
   const resultData=niftyData.filter((data)=>data.isDetail)
-  console.log(resultData);
+  // console.log(resultData);
   const handleMouseEnter = (itemId) => {
     console.log(`Item Number : ${itemId}`);
     setHoveredItem(itemId);
@@ -28,7 +27,6 @@ function App() {
   const handleMouseLeave = () => {
     setHoveredItem(null);
   };
-  // console.log(content);
   const viewSDetail =(itemId)=>{
         console.log(resultData[0].sData);
         setsDataToggled(!sDataToggled);
@@ -109,7 +107,8 @@ function App() {
             </div>
             <div className=" relative image-container px-[20%] py-4">
                 <img src={data.imgUrl} alt="img" />
-                <img className= {`absolute top-${data.cordinate.x} w-5 max-md:w-7 left-[${data.cordinate.y+position>100?data.cordinate.y-position:data.cordinate.y+position<0?data.cordinate.y+position:data.cordinate.y-position}%]`} src="https://technicals.zerodha.com/static/media/pointer.c2b2a6c5.svg" alt="" />
+                <img className= {`absolute top-9 w-5 max-md:w-7 left-[${data.cordinate.y+position>100?data.cordinate.y-position:data.cordinate.y+position<0?data.cordinate.y+position:data.cordinate.y-position}%]`} 
+                src="https://technicals.zerodha.com/static/media/pointer.c2b2a6c5.svg" alt="" />
 
                <div className=" flex justify-between items-center">
                   {
